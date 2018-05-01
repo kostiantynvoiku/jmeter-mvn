@@ -1,6 +1,6 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,Latency,IdleTime,Connect
-1525187648106,1263,https://qa.starofservice.com/,200,OK,Thread Group 1-1,text,true,,25808,0,1,1,1179,0,0
-1525187652104,474,https://qa.starofservice.com/,200,OK,Thread Group 1-2,text,true,,25808,0,1,1,389,0,0
-1525187656103,516,https://qa.starofservice.com/,200,OK,Thread Group 1-3,text,true,,25808,0,1,1,431,0,0
-1525187660105,495,https://qa.starofservice.com/,200,OK,Thread Group 1-4,text,true,,25808,0,1,1,408,0,0
-1525187664104,474,https://qa.starofservice.com/,200,OK,Thread Group 1-5,text,true,,25808,0,1,1,388,0,0
+1525192489547,828,https://qa.starofservice.com/,200,OK,Thread Group 1-1,text,true,,25808,0,1,1,745,0,0
+1525192493544,480,https://qa.starofservice.com/,200,OK,Thread Group 1-2,text,true,,25808,0,1,1,393,0,0
+1525192497544,493,https://qa.starofservice.com/,200,OK,Thread Group 1-3,text,true,,25808,0,1,1,407,0,0
+1525192501550,515,https://qa.starofservice.com/,200,OK,Thread Group 1-4,text,true,,25808,0,1,1,426,0,0
+1525192505545,502,https://qa.starofservice.com/,200,OK,Thread Group 1-5,text,true,,25808,0,1,1,412,0,0
