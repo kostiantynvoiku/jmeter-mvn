@@ -5,6 +5,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>jmeter-test</name>
     <description>jmeter-test</description>
+    <properties>
+        <threads>10</threads>
+        <rampup>30</rampup>
+        <loops>5</loops>
+        <stage>qa.starofservice.com</stage>
+    </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
@@ -12,6 +18,12 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.21.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
         <dependency>
@@ -34,6 +46,14 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <propertiesUser>
+                        <threads>${threads}</threads>
+                        <rampup>${rampup}</rampup>
+                        <loops>${loops}</loops>
+                        <stage>${stage}</stage>
+                    </propertiesUser>
+                </configuration>
             </plugin>
         </plugins>
     </build>
