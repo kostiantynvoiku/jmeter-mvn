@@ -13,14 +13,22 @@
         <!--<relativePath/> lookup parent from repository -->
     </parent>
     
-    <properties>
+    <!--<properties>
         <threads>10</threads>
         <rampup>30</rampup>
         <loops>5</loops>
         <stage>qa.starofservice.com</stage>
-    </properties>
+    </properties> -->
     
     <dependencies>
+        
+        <!-- https://mvnrepository.com/artifact/com.lazerycode.jmeter/jmeter-maven-plugin -->
+        <dependency>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -129,12 +137,22 @@
                     </execution>
                 </executions>
                 <configuration>
+                    
+                    <testFilesIncluded>
+                        <!--  <jMeterTestFile>OAuth_Token_Prod_L2.jmx</jMeterTestFile> -->
+                        <jMeterTestFile>${TestFile}.jmx</jMeterTestFile>
+                    </testFilesIncluded>
+                    
                     <propertiesUser>
                         <threads>${threads}</threads>
                         <rampup>${rampup}</rampup>
                         <loops>${loops}</loops>
                         <stage>${stage}</stage>
                     </propertiesUser>
+                    <!-- <jmeterExtensions>
+                        <artifact>ApacheJMeter_core.jar</artifact>
+                    </jmeterExtensions>
+                    <downloadExtensionDependencies>false</downloadExtensionDependencies> -->
                 </configuration>
             </plugin>
 
@@ -154,9 +172,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.5.1</version>
-                <!--<configuration>-->
-                <!--<outputDirectory>C:\Users\ab66378\Desktop</outputDirectory>-->
-                <!--</configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
