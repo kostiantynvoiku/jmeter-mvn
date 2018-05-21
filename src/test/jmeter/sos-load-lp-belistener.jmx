@@ -141,7 +141,7 @@
               </elementProp>
               <elementProp name="influxdbUrl" elementType="Argument">
                 <stringProp name="Argument.name">influxdbUrl</stringProp>
-                <stringProp name="Argument.value">http://50.112.220.137:8086/write?db=sos_load_lp</stringProp>
+                <stringProp name="Argument.value">http://localhost:8086/write?db=sos_load_lp</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="application" elementType="Argument">
